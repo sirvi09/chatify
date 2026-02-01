@@ -30,3 +30,5 @@ export const arcjetProtection = async (req,res,next) =>{
         next();
     }
 }
+
+export default arcjetProtection;
