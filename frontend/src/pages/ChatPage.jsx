@@ -1,5 +1,5 @@
 import React from 'react'
-import { useAuthStore } from '../store/userAuthStore.js';
+import { useAuthStore } from '../store/useAuthStore.js';
 
 function ChatPage() {
     const {authUser,isLoading, login } = useAuthStore()
