@@ -7,6 +7,7 @@ import cors from "cors"
 import authRoutes from "./routes/auth.route.js";
 import messageRoutes from "./routes/message.route.js";
 import { connectDB } from "./lib/db.js";
+import {server } from "./lib/socket.js";
 
 
 const app = express();
@@ -31,6 +32,6 @@ app.get("/", (_,res) => {
     app.use(express.static(path.join(__dirname,"../frontend","dist","index.html")))
 })
 }
- app.listen(PORT, () => {
+server.listen(PORT, () => {
     console.log("server is running on port: " + PORT)
  });
